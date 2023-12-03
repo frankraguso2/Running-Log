@@ -24,26 +24,25 @@ function showMphFcn () {
     document.getElementById("grid-graphs").classList.remove(`grid-big-mph`);
     document.getElementById("grid-graphs").classList.remove(`grid-big-distance`);
     document.getElementById("grid-graphs").classList.add(`grid-graphs`);
-  }
+    return;
+  } else if ((mphButton.innerHTML === `Show MPH Graph`) && (distanceButton.innerHTML === `Don't Show Graph`)) { 
 
-  if ((mphButton.innerHTML === `Show MPH Graph`) && (distanceButton.innerHTML === `Don't Show Graph`)) { 
-
+    document.getElementById("grid-graphs").classList.remove(`grid-big-mph`);
     document.getElementById("grid-graphs").classList.add(`grid-big-distance`);
     document.getElementById("grid-graphs").classList.remove(`grid-graphs`);
-  }
-
-  if ((mphButton.innerHTML === `Don't Show Graph`) && (distanceButton.innerHTML === `Show Distance Graph`)) { 
+    return;
+  } else if ((mphButton.innerHTML === `Don't Show Graph`) && (distanceButton.innerHTML === `Show Distance Graph`)) { 
 
     document.getElementById("grid-graphs").classList.add(`grid-big-mph`);
     document.getElementById("grid-graphs").classList.remove(`grid-big-distance`);
     document.getElementById("grid-graphs").classList.remove(`grid-graphs`);
-  }
-
-  if ((mphButton.innerHTML === `Don't Show Graph`) && (distanceButton.innerHTML === `Don't Show Graph`)) { 
+    return;
+  } else if ((mphButton.innerHTML === `Don't Show Graph`) && (distanceButton.innerHTML === `Don't Show Graph`)) { 
 
     document.getElementById("grid-graphs").classList.remove(`grid-big-mph`);
     document.getElementById("grid-graphs").classList.remove(`grid-big-distance`);
     document.getElementById("grid-graphs").classList.add(`grid-graphs`);
+    return;
   }
 }
 
@@ -67,26 +66,25 @@ function showDistanceFcn () {
     document.getElementById("grid-graphs").classList.remove(`grid-big-mph`);
     document.getElementById("grid-graphs").classList.remove(`grid-big-distance`);
     document.getElementById("grid-graphs").classList.add(`grid-graphs`);
-  }
+    return;
+  } else if ((mphButton.innerHTML === `Don't Show Graph`) && (distanceButton.innerHTML === `Show Distance Graph`)) { 
 
-  if ((mphButton.innerHTML === `Don't Show Graph`) && (distanceButton.innerHTML === `Show Distance Graph`)) { 
-
+    document.getElementById("grid-graphs").classList.remove(`grid-big-distance`);
     document.getElementById("grid-graphs").classList.remove(`grid-graphs`);
     document.getElementById("grid-graphs").classList.add(`grid-big-mph`);
-  }
-
-  if ((mphButton.innerHTML === `Show MPH Graph`) && (distanceButton.innerHTML === `Don't Show Graph`)) { 
+    return;
+  } else if ((mphButton.innerHTML === `Show MPH Graph`) && (distanceButton.innerHTML === `Don't Show Graph`)) { 
 
     document.getElementById("grid-graphs").classList.remove(`grid-big-mph`);
     document.getElementById("grid-graphs").classList.add(`grid-big-distance`);
     document.getElementById("grid-graphs").classList.remove(`grid-graphs`);
-  }
-
-  if ((mphButton.innerHTML === `Don't Show Graph`) && (distanceButton.innerHTML === `Don't Show Graph`)) { 
+    return;
+  } else if ((mphButton.innerHTML === `Don't Show Graph`) && (distanceButton.innerHTML === `Don't Show Graph`)) { 
 
     document.getElementById("grid-graphs").classList.remove(`grid-big-mph`);
     document.getElementById("grid-graphs").classList.remove(`grid-big-distance`);
     document.getElementById("grid-graphs").classList.add(`grid-graphs`);
+    return;
   }
 }
 
