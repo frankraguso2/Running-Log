@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset = "utf-8" name = "viewport" content = "width=device-width, initial-scale=1">
+
+    <title class = "title">Running Log 3</title>
+
+    <link rel = "stylesheet" href = "running3.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <div class = "border">
+      <div class = "grid-header">
+        <div class = "title">Running Log 3</div>
+      </div>
+      <div class = "full-body">
+        <div class = "grid-graphs" id="grid-graphs">
+          <canvas class = "Mph" id="Mph" style = "display: inline-block;"></canvas>
+          <canvas class = "Distance" id="Distance" style = "display: inline-block;"></canvas>
+          <button class = "show-mph-button" onclick = "showMphFcn();">Don't Show Graph</button>
+          <button class = "show-distance-button" onclick = "showDistanceFcn();">Don't Show Graph</button>
+        </div>
+        <div>
+          <div class = "header-inputs">
+            <p>Distance Ran</p>
+            <div></div>
+            <p>Time Ran</p>
+            <div></div>
+            <P>Date</P>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div>
+          <div class = "grid-inputs">
+            <form>
+              <select id="miles-ran" class = "all-input">
+                <option value = "">(miles)</option>
+              </select>
+            </form>
+            <div></div>
+            <form>
+              <select id="hr-ran" class = "all-input" name = "hours">
+                <option value = "">(hr)</option>
+              </select>
+              <select id="min-ran" class = "all-input" name = "minutes">
+                <option value = "">(min)</option>
+              </select>
+              <select id="sec-ran" class = "all-input" name = "seconds">
+                <option value = "">(sec)</option>
+              </select>
+            </form>
+            <div></div>
+              <input class = "date-input" type = "date">
+            <div></div>
+            <button class = "add-button" onclick = "addRun(); addToList();">Add</button>
+          </div>
+        </div>
+        <div class = "grid-list">
+          <button class = "running-list-button" id = "runningListButton" onclick = "showRunning();">Show Running List</button>
+        </div>
+        <div id = "running-section-header">
+          <div></div>
+          <div id = "running-titles"></div>
+          <div></div>
+        </div>
+        <div id = "running-section">
+          <div class = "grid-master-list running-list" id = "runningList"></div>
+        </div>
+      </div>
+    </div>
+    <script src = "running3.js"></script>
+  </body>
+</html>
